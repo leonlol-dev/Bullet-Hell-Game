@@ -29,8 +29,10 @@ section {
 }
 
 footer{
-    height: 500px;
+    padding:80px;
     background-color: black;
+    color:white;
+    text-align:center;
     
 }
 
@@ -186,8 +188,16 @@ p3
     display:flex;
     gap: 50px;
     justify-content:center;
-    padding:5px
+    padding:5px;
     
+}
+
+@media only screen and (max-width: 1600px)
+{
+    .project-container{
+        display:flex;
+        flex-wrap: wrap;
+    }
 }
 
 .project-image{
@@ -203,7 +213,27 @@ hr{
     margin-right:20px;
 }
 
-.subtext{
+.subtext {
     font-size: 15px;
     font-weight: 300;
+}
+
+.project-link {
+    text-decoration: none;
+    color: lightgrey;
+    box-shadow: inset 0 0 0 0 white;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+    .project-link:hover {
+        box-shadow: inset 100px 0 0 0 #695e5e;
+        color: white;
+    }
+
+
+a {
+    text-decoration:none;
+    color:white;
 }

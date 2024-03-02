@@ -1,0 +1,136 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+
+
+
+
+<body style="background-color:pink; zoom:110%">
+
+  <body>
+
+    <section>
+
+    <div class="center" style="margin-bottom: 50px;">
+      <img src="https://s3-eu-west-1.amazonaws.com/tpd/logos/5fef06251251ff0001d6374f/0x0.png" width="200px" height="200px" style="size: 10%;" >
+      <br>
+      <P1 class="roboto-light"style="position: relative; right: -9px;">Signature Email Generator</P1>
+    </div>
+
+
+    <div style="position: relative; left: -25px">
+      <input class="textinputbox" id="emailText"type="text" id="email" placeholder="Enter your email here" />
+      <br>
+      <input class="textinputbox" id="imageText" type="text" id="imageURL" placeholder="Enter your image URL here" />
+    </div>
+
+
+
+    <div  class="center" style="margin-top: 25px; position: relative; left: -25px" >
+      <button class="btn default"  onclick="createSignature()" id="manual"><p2 class="roboto-light">Generate Email Signature</p2></button>
+
+      <script>
+        function createSignature() {
+          document.getElementById("emailSign").innerHTML = document.getElementById('emailText').value;
+          document.getElementById("imageSign").src = document.getElementById('imageText').value
+        }
+      </script>
+
+    </div>
+
+    <div id="outputbox" class="center" style=" border:1px solid black; width: 300; margin-top: 10px; margin-bottom: 10pxl;position: relative; left: -25px ">
+      <div id="signature" style="background-color: white;">
+        <div style="align-content:safe">
+          <!-- <div style="line-height:50%;"">
+                        <span style=" vertical-align:middle; font-family: 'Times New Roman' , Times, serif; font-size:18px">Agnes
+                        Chua</span>
+                    </div>
+                
+                    <div style="line-height:115%;"">
+                        <span style=" vertical-align:middle; font-family: 'Times New Roman' , Times, serif; font-size:10px">Marketing
+                        Associate. </span>
+                        <span style="vertical-align:middle; font-family: 'Times New Roman', Times, serif; font-size:10px">
+                            <b>SkinCupid</b></span>
+                    </div> -->
+
+          <img width="125" id="imageSign" src="https://raw.githubusercontent.com/leonlol-dev/images/main/skincupidTitles/1.png"
+            alt="Title">
+
+          <div style="line-height:25%;"">
+                        <span style=" font-size:10px; font-family: sans-serif, serif;"><b>E: </b></span>
+            <span id="emailSign" style=" vertical-align:middle; font-family: sans-serif, serif; font-size:10px">
+              agnes@skincupid.co.uk</span>
+          </div>
+
+          <div>
+            <span style="font-size:10px; font-family: sans-serif, serif;"><b>W: </b></span>
+            <a style="text-decoration: none;" href="https://www.skincupid.co.uk/"><span
+                style="vertical-align:middle; text-decoration: none; font-family: sans-serif, serif;; font-size:10px">www.skincupid.co.uk
+              </span></a>
+          </div>
+
+
+        </div>
+      
+
+      <div style="line-height:144%">
+
+        <a href="https://www.instagram.com/skin.cupid.uk/"><img width="15" alt="logo"
+            src="https://raw.githubusercontent.com/leonlol-dev/images/main/skincupidTitles/instagram.png"
+            style="padding-right:5px; text-decoration: none;" /></a>
+
+        <a href="https://www.tiktok.com/@skincupid?lang=en">
+          <a href="https://www.tiktok.com/@skincupid?lang=en"><img width="15" alt="logo"
+              src="https://raw.githubusercontent.com/leonlol-dev/images/main/skincupidTitles/tik-tok.png"
+              style="padding-right:5px; text-decoration: none;" /></a>
+        </a>
+        <a href="https://www.youtube.com/@skincupid"><img width="15" alt="logo"
+            src="https://raw.githubusercontent.com/leonlol-dev/images/main/skincupidTitles/youtube_3.png"
+            style="padding-right:5px; text-decoration: none;" /></a>
+
+        <a href="https://www.pinterest.co.uk/skincupid/"><img width="15" alt="logo"
+            src="https://raw.githubusercontent.com/leonlol-dev/images/main/skincupidTitles/pinterest_1.png"
+            style="padding-right:5px; text-decoration: none;" /></a>
+
+          </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <div id="copybutton" class="center" style="margin-top: 11px; position: relative; left: 50px"> 
+      <button id="a" onclick="copyDivToClipboard()"> Click to copy </button>
+
+      <script>
+        function copyDivToClipboard() {
+          var range = document.createRange();
+          range.selectNode(document.getElementById("signature"));
+          window.getSelection().removeAllRanges(); // clear current selection
+          window.getSelection().addRange(range); // to select text
+          document.execCommand("copy");
+          window.getSelection().removeAllRanges();// to deselect
+        }
+      </script>
+
+    </div>
+
+  </section>
+
+
+
+  </body>
+
+</body>
+
+</html>
